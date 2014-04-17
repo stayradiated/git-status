@@ -1,0 +1,29 @@
+{
+  "name": "git-status",
+  "version": "0.0.0",
+  "description": "Quickly check which projects have uncommited code",
+  "main": "index.js",
+  "bin": {
+    "git-status": "./bin/git-status"
+  },
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stayradiated/git-status"
+  },
+  "keywords": [
+    "git",
+    "status"
+  ],
+  "author": "George Czabania",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stayradiated/git-status/issues"
+  },
+  "homepage": "https://github.com/stayradiated/git-status",
+  "dependencies": {
+    "log_": "0.0.3"
+  }
+}

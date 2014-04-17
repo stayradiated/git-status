@@ -1,0 +1,16 @@
+#!/usr/bin/env node
+
+var gitStatus = require('../index');
+var log = require('log_')('git', 'blue');
+
+var options = {};
+
+if (process.argv.indexOf('-b') >= 0) {
+  options.branch = true;
+}
+
+gitStatus(options, function (dir, data) {
+  log(dir);
+  console.log(data);
+});
+
