@@ -18,10 +18,15 @@ module.exports = function (options, fn) {
     process.stdout.on('data', function (data) {
       fn(dir, data.toString());
     });
+
   };
 
   fs.readdir(cwd, function (err, contents) {
-    contents.forEach(checkStatus);
+    contents.forEach(function (path) {
+      fs.stat(path, function (err, stats) {
+        if (stats.isDirectory()) checkStatus(path);
+      });
+    });
   });
 
 };
